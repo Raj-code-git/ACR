@@ -6,6 +6,7 @@ jobs:
 
   build-and-deploy:
     runs-on: windows-latest  #ubuntu-latest
+    environment: dev
     steps:
 
     - name: Azure Login
