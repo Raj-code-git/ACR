@@ -1,0 +1,13 @@
+steps:    
+- task: AzureCLI@2    
+displayName: 'Azure CLI '    
+inputs:     
+ azureSubscription: 'Azure'     
+ scriptType: batch    
+ scriptLocation: inlineScript    
+ inlineScript: |    
+   az acr import \    
+   --name myregistry\    
+   --source aci-helloworld:latest \     
+   --image aci-helloworld:latest \    
+   --registry /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sourceResourceGroup/providers/Microsoft.ContainerRegistry/registries/mysourceregistry
