@@ -10,6 +10,7 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest  #ubuntu-latest
     #environment: dev
+    environment: AZURE_CREDENTIALS
     steps:
 
     - name: Azure Login
